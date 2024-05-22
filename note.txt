@@ -1,0 +1,35 @@
+*install tailwind css
+
+*/framework guides(select)->
+
+*/npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+replace tailwind.config.js with
+--------------------------------------
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+-----------------------------------------
+/*add to index.css
+--------------------
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+---------------------
+
+/* to test
+---------------------------------------------
+<h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+--------------------------------------------
